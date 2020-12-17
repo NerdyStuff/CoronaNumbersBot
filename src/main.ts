@@ -14,7 +14,7 @@ const { JSDOM } = jsdom;
 
 async function start() {
 
-  schedule.scheduleJob('*/5 * * * * *', async () => {
+  schedule.scheduleJob('* * 9 * * *', async () => {
     let msg = ""
     const response = await got(url);
     const dom = new JSDOM(response.body);
