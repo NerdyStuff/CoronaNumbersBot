@@ -57,7 +57,6 @@ async function start() {
       const data = fs.readFileSync(filePath, 'UTF-8');
       const lines = data.split(/\r?\n/);
       lines.forEach((line) => {
-        console.log(line)
         if (line == id) {
           append = false;
         }
