@@ -14,7 +14,7 @@ const { JSDOM } = jsdom;
 
 async function start() {
 
-  schedule.scheduleJob('* * 9 * * *', async () => {
+  schedule.scheduleJob('0 9 * * *', async () => {
     let msg = ""
     const response = await got(url);
     const dom = new JSDOM(response.body);
@@ -103,8 +103,8 @@ async function start() {
         if (chatID != "") {
           chatID.replace(/\r?\n|\r/, '');
           let now = new Date();
-          let day = now.getDay();
-          let month = now.getMonth();
+          let day = now.getDate();
+          let month = now.getMonth()+1;
           let year = now.getFullYear();
           bot.sendMessage(chatID, `Die Zahlen für heute den ${day}.${month}.${year}:\n\nBundesland | Infizierte | Todefälle\n${msg}`);
         }
