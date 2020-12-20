@@ -106,7 +106,7 @@ async function start() {
           let day = now.getDate();
           let month = now.getMonth()+1;
           let year = now.getFullYear();
-          bot.sendMessage(chatID, `Die Zahlen für heute den ${day}.${month}.${year}:\n\nBundesland | Infizierte | Todefälle\n${msg} | 7 Tage Inzidenz`);
+          bot.sendMessage(chatID, `Die Zahlen für heute den ${day}.${month}.${year}:\n\nBundesland | Infizierte | Todefälle\n${msg} | 7 Tages Inzidenz`);
         }
       });
     } catch (err) {
